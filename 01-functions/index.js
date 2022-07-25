@@ -1,19 +1,24 @@
 // Ex 01
 
 function removeDuplicates(...arrayOfIntegers) {
-    for (let i = 0; i < arrayOfIntegers.length; i++) {
+    let newArray = [...new Set(arrayOfIntegers)];
 
-        for (let j = 1; j < arrayOfIntegers.length; j++) {
+    // for (let i = 0; i < arrayOfIntegers.length - 2; i++) {
 
-            if (arrayOfIntegers[i] === arrayOfIntegers[j]) {
-                arrayOfIntegers.splice(arrayOfIntegers[j], arrayOfIntegers[j++])
-            }
-        }
-    }
-    return arrayOfIntegers;
+
+
+    //     for (let j = 1; j < arrayOfIntegers.length; j++) {
+    //         if (newArray[i] !== arrayOfIntegers[j]) {
+    //             newArray.push(arrayOfIntegers[j])
+    //         }
+
+    //     }
+
+    return newArray;
 }
 
-console.log(removeDuplicates(4, 2, 4, 5, 6, 2));
+
+console.log(removeDuplicates(2, 3, 6, 5, 4, 2, 2, 4, 5, 6));
 
 
 // EXE 2
