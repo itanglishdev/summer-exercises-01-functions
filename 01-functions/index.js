@@ -46,27 +46,39 @@ console.log(favRecipe.ingredients[4]);
 // EX 3
 
 const arrayOfObjects = [
-    bookOne, bookTwo, bookThree, bookFour]
 
-const bookOne = {
-    title: "Star Wars Episode I",
-    author: "Me",
-    read: true
-}
-const bookTwo = {
-    title: "Star Wars The clone Wars",
-    author: "Still me",
-    read: false
-}
-const bookThree = {
-    title: "Star Wars Return of the Jedi",
-    author: "Guess Who?",
-    read: true
+    bookOne = {
+        title: "Star Wars Episode I",
+        author: "Me",
+        read: true
+    },
+
+    bookTwo = {
+        title: "Star Wars The clone Wars",
+        author: "Still me",
+        read: false
+    },
+
+    bookThree = {
+        title: "Star Wars Return of the Jedi",
+        author: "Guess Who?",
+        read: true
+    },
+
+    bookFour = {
+        title: "Star Wars The pizza man",
+        author: "Guendoline",
+        read: false
+    }
+]
+
+function checkIfRead(bookArray) {
+    for (let i = 0; i < bookArray.length; i++) {
+        if (bookArray[i].read === false) {
+            console.log("You already read", bookArray[i].title, "by", bookArray[i].author);
+        } else { console.log("You still need to read", bookArray[i].title, "by", bookArray[i].author); }
+
+    }
 }
 
-const bookFour = {
-    title: "Star Wars The pizza man",
-    author: "Guendoline",
-    read: false
-}
-
+checkIfRead(arrayOfObjects)
