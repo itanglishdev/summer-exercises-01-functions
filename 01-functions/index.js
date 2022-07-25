@@ -42,3 +42,31 @@ console.log(favRecipe.ingredients[1]);
 console.log(favRecipe.ingredients[2]);
 console.log(favRecipe.ingredients[3]);
 console.log(favRecipe.ingredients[4]);
+
+// EX 3
+
+const arrayOfObjects = [
+    bookOne, bookTwo, bookThree, bookFour]
+
+const bookOne = {
+    title: "Star Wars Episode I",
+    author: "Me",
+    read: true
+}
+const bookTwo = {
+    title: "Star Wars The clone Wars",
+    author: "Still me",
+    read: false
+}
+const bookThree = {
+    title: "Star Wars Return of the Jedi",
+    author: "Guess Who?",
+    read: true
+}
+
+const bookFour = {
+    title: "Star Wars The pizza man",
+    author: "Guendoline",
+    read: false
+}
+
