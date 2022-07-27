@@ -200,3 +200,15 @@ guessWord("i");
 guessWord("f");
 guessWord("z");
 guessWord("a");
+
+// EX 9
+
+function findTheOccurrences(string, letter) {
+    let counter = 0;
+    for (let i = 0; i <= string.length; i++) {
+        if (string[i] === letter) {
+            counter++;
+        }
+    } return counter;
+}
+console.log(findTheOccurrences("automatization", "a"));
