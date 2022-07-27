@@ -229,5 +229,6 @@ function uniqueCharacters(string, character) {
 
 }
 
+
 console.log(uniqueCharacters("dontknowexactlywhattowrightherebutilldoit", "a"));
 
