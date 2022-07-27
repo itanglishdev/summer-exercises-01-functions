@@ -96,4 +96,18 @@ function helloWorld(language) {
         return (phrasesInDifferentLanguages['de'] + " => " + phrasesInDifferentLanguages['en']);
 }
 
-console.log(helloWorld('de'))
+console.log("(If/else function) ", helloWorld('de'))
+
+function helloWorldV2(language) {
+    switch (language) {
+        case 'es':
+            return ("Hola Mundo" + " => " + "Hello World");
+            break;
+        case 'de':
+            return ("Hallo Welt" + " => " + "Hello World");
+        default:
+            return ("Hello World")
+            break;
+    }
+}
+console.log("(Switch Function)", helloWorldV2('de'));
