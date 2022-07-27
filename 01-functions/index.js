@@ -137,3 +137,14 @@ function easyLoop() {
     }
 }
 easyLoop()
+
+//  EX 7 
+function multiplyLoop() {
+    for (let i = 0; i <= 10; i++) {
+
+
+        console.log((i * 9));
+    }
+
+}
+multiplyLoop();
