@@ -98,16 +98,30 @@ function helloWorld(language) {
 
 console.log("(If/else function) ", helloWorld('de'))
 
+//       EX 4      SWITCH
+
 function helloWorldV2(language) {
     switch (language) {
         case 'es':
             return ("Hola Mundo" + " => " + "Hello World");
-            break;
         case 'de':
             return ("Hallo Welt" + " => " + "Hello World");
         default:
             return ("Hello World")
-            break;
     }
 }
 console.log("(Switch Function)", helloWorldV2('de'));
+
+
+//   EX 5
+
+function pluralize(insertAnimalName) {
+    if (insertAnimalName === "fox" || insertAnimalName === "geese" || insertAnimalName === "rhinoceros") {
+        return (insertAnimalName + "es")
+
+    } else {
+        return (insertAnimalName + "s")
+    }
+}
+
+console.log(pluralize('geese'));
