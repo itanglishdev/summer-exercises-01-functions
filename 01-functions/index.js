@@ -4,14 +4,10 @@ function removeDuplicates(...arrayOfIntegers) {
     let newArray = [...new Set(arrayOfIntegers)];
 
     // for (let i = 0; i < arrayOfIntegers.length - 2; i++) {
-
-
-
     //     for (let j = 1; j < arrayOfIntegers.length; j++) {
     //         if (newArray[i] !== arrayOfIntegers[j]) {
     //             newArray.push(arrayOfIntegers[j])
     //         }
-
     //     }
 
     return newArray;
@@ -82,3 +78,22 @@ function checkIfRead(bookArray) {
 }
 
 checkIfRead(arrayOfObjects)
+
+//  EX 4
+const phrasesInDifferentLanguages = {
+    'es': "Hola Mundo",
+    'en': 'Hello World',
+    'de': "Hallo Welt"
+}
+
+function helloWorld(language) {
+    if (language === 'es') {
+        return (phrasesInDifferentLanguages['es'] + " => " + phrasesInDifferentLanguages['en']);
+
+    } else if (language == 'en') {
+        return phrasesInDifferentLanguages['en'];
+    } else
+        return (phrasesInDifferentLanguages['de'] + " => " + phrasesInDifferentLanguages['en']);
+}
+
+console.log(helloWorld('de'))
