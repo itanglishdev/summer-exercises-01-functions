@@ -159,8 +159,10 @@ let guessingWordString = "";
 let startAmount = 0;
 let rightAnswers = 0;
 let wrongAnswers = 0;
+let bonusCounter = 2;
 
 function guessWord(letter) {
+
 
     if (word.includes(letter)) {
         rightAnswers++;
@@ -182,8 +184,13 @@ function guessWord(letter) {
     }
 
     if (!guessingWord.includes("_")) {
+
         console.log("YOU WON THE GAME and took home", startAmount, "$!", "\n", "You got", wrongAnswers, "wrong answers and", '\n', rightAnswers, "right answers");
     }
+    console.log("If this was a hangman game, you would be left", "\n", "with ", (6 - wrongAnswers), "chances to guess");
+
+
+
 }
 
 guessWord('p');
