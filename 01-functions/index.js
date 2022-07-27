@@ -150,3 +150,38 @@ function multiplyLoop() {
 
 }
 multiplyLoop();
+
+// Ex 8
+const word = ["p", "i", "z", "z", "a"];
+const guessingWord = ["_", "_", "_", "_", "_"];
+let guessingWordString = "";
+function guessWord(letter) {
+
+
+    for (let i = 0; i < 21; i++) {
+        if (word.includes(letter)) {
+            for (let i = 0; i < word.length; i++) {
+
+                if (letter === word[i]) {
+                    guessingWord[i] = letter;
+                    guessingWordString = guessingWord.join(" ");
+                }
+            }
+        }
+    }
+    console.log(guessingWordString, " You got one! ")
+    if (!guessingWord.includes("_")) {
+        console.log("YOU WON THE GAME");
+
+    }
+}
+
+
+
+guessWord('p');
+guessWord('f');
+guessWord("h");
+guessWord("i");
+guessWord("f");
+guessWord("z");
+guessWord("a");
