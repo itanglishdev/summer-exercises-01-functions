@@ -156,12 +156,14 @@ const word = ["p", "i", "z", "z", "a"];
 const guessingWord = ["_", "_", "_", "_", "_"];
 let guessingWordString = "";
 let startAmount = 0;
+let rightAnswers = 0;
+let wrongAnswers = 0;
 function guessWord(letter) {
 
 
-    for (let i = 0; i < 21; i++) {
-        if (word.includes(letter)) {
-
+    if (word.includes(letter)) {
+        rightAnswers++;
+        for (let i = 0; i < 7; i++) {
             for (let i = 0; i < word.length; i++) {
 
                 if (letter === word[i]) {
@@ -171,9 +173,14 @@ function guessWord(letter) {
             }
         }
     }
-    console.log(guessingWordString, " You got one and you are now winning", startAmount += (50 + 15), "$!")
+    console.log(guessingWordString, " You got one and you won 45$,", '\n', "you are now winning", startAmount += 45, "$!")
+    if (!word.includes(letter)) {
+        wrongAnswers++;
+        console.log("Wrong letter you lost 31$ and now", '\n', "you are winning", startAmount -= 31, "$!");
+    }
+
     if (!guessingWord.includes("_")) {
-        console.log("YOU WON THE GAME and took home", startAmount, "$!");
+        console.log("YOU WON THE GAME and took home", startAmount, "$!", "\n", "You got", wrongAnswers, "wrong answers and", '\n', rightAnswers, "right answers");
 
     }
 }
