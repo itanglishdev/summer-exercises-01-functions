@@ -212,3 +212,22 @@ function findTheOccurrences(string, letter) {
     } return counter;
 }
 console.log(findTheOccurrences("automatization", "a"));
+
+//EX 10
+
+let newString = "";
+function uniqueCharacters(string, character) {
+    const stringArray = string.split("");
+
+    for (let i = 0; i <= stringArray.length; i++) {
+        if (stringArray[i] === character) {
+            stringArray.splice([i], 1);
+        }
+    }
+    newString = stringArray.join('');
+    return newString;
+
+}
+
+console.log(uniqueCharacters("dontknowexactlywhattowrightherebutilldoit", "a"));
+
